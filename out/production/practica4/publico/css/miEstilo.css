@@ -1,0 +1,35 @@
+#contenedorCrearUsuario{
+   width: 20%;
+}
+
+#btnCrearUsuario{
+    border-radius: 10px;
+    margin-left: 36%;
+    width: 100px;
+}
+
+#btnCrearArticulo{
+    border-radius: 10px;
+    width: 300px;
+    margin-left: 37%;
+}
+
+.navbar-custom{
+    background-color: #2b669a;
+}
+
+#etiqueta{
+    border-radius: 40px;
+    background-color: #9d9d9d;
+    border: none;
+
+}
+
+#cuerpo{
+    white-space: pre-wrap;
+}
+
+body {
+
+
+}

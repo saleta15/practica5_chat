@@ -9,22 +9,25 @@ import modelos.Articulo;
 import modelos.Comentario;
 import modelos.Etiqueta;
 import modelos.Usuario;
+import org.eclipse.jetty.websocket.api.Session;
 import services.ArticuloServices;
 import services.ComentarioServices;
 import services.EtiquetaServices;
 import services.UsuarioServices;
+import websocket.ServidorMensajesWebSocketHandler;
 
 import javax.persistence.EntityManager;
 
-import java.util.Date;
+import java.util.*;
 
 import static spark.Spark.*;
 
 
 public class Main {
+    public static Map<String,Session> usuariosConectados = new HashMap<>();
     private static EntityManager em;
     public static void main(String[] args) throws Exception{
-
+        webSocket("/mensajeServidor", ServidorMensajesWebSocketHandler.class);
         staticFileLocation("/publico");
         if (!UsuarioServices.getInstancia().hayAdmin()){
             Usuario admin = new Usuario();

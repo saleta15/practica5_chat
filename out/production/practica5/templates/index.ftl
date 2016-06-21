@@ -31,29 +31,26 @@
 
                 </div>
             </div>
-            <#if !usuario.administrador>
-                <div class="col-lg-5">
-                    <div class="panel panel-default" >
+            <div class="col-lg-5">
+                <div class="panel panel-default" >
 
-                        <div class="panel-body" >
-                            <h5>Chatea con un administrador</h5>
-                            <hr>
-                            <form action="/administradoresConectados" role="form">
-                                <div class="form-group">
-                                    <label for="nombre">Digita tu nombre:</label>
-                                    <input type="text" class="form-control" name="nombre">
+                    <div class="panel-body" >
+                        <h5>Chatea con un administrador</h5>
+                        <hr>
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="nombre">Digita tu nombre:</label>
+                                <input type="text" class="form-control" name="nombre">
 
-                                </div>
-                                <button class="btn btn-info" type="submit">Ver administradores disponibles</button>
-                            </form>
+                            </div>
+                            <button class="btn btn-info" type="submit">Ver administradores disponibles</button>
+                        </form>
 
-
-                        </div>
 
                     </div>
-                </div>
-            </#if>
 
+                </div>
+            </div>
 
         </div>
 

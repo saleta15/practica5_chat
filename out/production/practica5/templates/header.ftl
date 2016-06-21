@@ -3,13 +3,13 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Pr&aacute;ctica 5</a>
+                <a class="navbar-brand" href="/">Pr&aacute;ctica 3</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                 <#if usuario.autor || usuario.administrador>
                     <li><a href="/redactarArticulo">Redactar</a></li>
-                    <li><a href="/chatRoom">Sala de chat</a></li>
+                    <li><a href="/chatRoom">Chats</a></li>
                 </#if>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

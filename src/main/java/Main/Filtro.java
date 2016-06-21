@@ -54,6 +54,15 @@ public class Filtro {
             }
         });
 
+        before("/chatRoom",(request, response) -> {
+            Usuario usuario=request.session().attribute("usuario");
+            if(usuario!=null && usuario.getAdministrador())
+                return;
+            if(usuario == null ||!usuario.getAutor()){
+                response.redirect("/");
+            }
+        });
+
         before("/editarArticulo/:articulo",(request, response) -> {
             Usuario usuario=request.session().attribute("usuario");
             if(usuario!=null && usuario.getAdministrador())
